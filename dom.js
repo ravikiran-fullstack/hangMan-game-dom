@@ -13,7 +13,7 @@ function createDomElement(ele, eleClass='', eleId=''){
 function createAlphaButton(buttonId){
   const button = document.createElement('button');
   button.id = buttonId;
-  button.classList = 'btnAlpha btnBorder btnOrange';
+  button.classList = 'btnAlpha';
   button.setAttribute('onclick', `enterLetter("${buttonId}")`);
   const buttonText = document.createTextNode(`${buttonId}`);
   button.append(buttonText);

@@ -1,10 +1,8 @@
-
-
 let killCount = 0;
 let inputCount = 0;
 let randomTestWord = "";
 let testWordHint = "";
-let ctx = '';
+let ctx = "";
 
 const startGameBtn = document.querySelector("#startGameBtn");
 startGameBtn.addEventListener("click", startGame);
@@ -17,24 +15,24 @@ function startGame(e) {
   testWordHint.innerHTML = randomTestWord.hint;
   correctAnswer.innerHTML = "";
   document.getElementById("inputBoxes").innerHTML = "";
-  ctx = document.getElementById('hangmanCanvas').getContext("2d");
+  ctx = document.getElementById("hangmanCanvas").getContext("2d");
   generateInputBoxes(randomTestWord.word.length);
-  clearCanvas(ctx, document.getElementById('hangmanCanvas'));
-  drawCanvas()
+  clearCanvas(ctx, document.getElementById("hangmanCanvas"));
+  drawCanvas();
   enableAllAlphaButtons();
 }
 
-function drawCanvas(){ 
-	ctx.font = "bold 35px serif"; 
-	ctx.fillStyle = "#FFAA40"; 
-	ctx.fillText('Hang Man',50,27); 
+function drawCanvas() {
+  ctx.font = "bold 35px serif";
+  ctx.fillStyle = "#FFAA40";
+  ctx.fillText("Hang Man", 50, 27);
 }
 
-function clearCanvas(context, canvas) { 
-	context.clearRect(0, 0, canvas.width, canvas.height); 
-	var w = canvas.width; 
-	canvas.width = 1; 
-	canvas.width = w; 
+function clearCanvas(context, canvas) {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  var w = canvas.width;
+  canvas.width = 1;
+  canvas.width = w;
 }
 
 function generateInputBoxes(length) {
@@ -74,51 +72,51 @@ function fillInputBoxes(letter, indexes) {
   });
 }
 
-function drawGallows(){ 
-	ctx.moveTo(120,305); 
-	ctx.lineTo(280,305); 
-	ctx.moveTo(260,305); 
-	ctx.lineTo(260,70); 
-	ctx.lineTo(180,70); 
-	ctx.lineTo(180,96); 
-	ctx.stroke(); 
+function drawGallows() {
+  ctx.moveTo(120, 305);
+  ctx.lineTo(280, 305);
+  ctx.moveTo(260, 305);
+  ctx.lineTo(260, 70);
+  ctx.lineTo(180, 70);
+  ctx.lineTo(180, 96);
+  ctx.stroke();
 }
 
-function drawHead(){ 
-	ctx.beginPath(); 
-	ctx.arc(180,120,23,0,Math.PI*2,false); 
-	ctx.closePath(); 
-	ctx.stroke(); 
+function drawHead() {
+  ctx.beginPath();
+  ctx.arc(180, 120, 23, 0, Math.PI * 2, false);
+  ctx.closePath();
+  ctx.stroke();
 }
 
-function drawBody(){ 
-	ctx.moveTo(180,143); 
-	ctx.lineTo(180,248); 
-	ctx.stroke(); 
+function drawBody() {
+  ctx.moveTo(180, 143);
+  ctx.lineTo(180, 248);
+  ctx.stroke();
 }
 
-function drawArm1(){ 
-	ctx.moveTo(180,175); 
-	ctx.lineTo(142,167); 
-	ctx.stroke(); 
+function drawArm1() {
+  ctx.moveTo(180, 175);
+  ctx.lineTo(142, 167);
+  ctx.stroke();
 }
 
-function drawArm2(){ 
-	ctx.moveTo(180,175); 
-	ctx.lineTo(218,167); 
-	ctx.stroke(); 
+function drawArm2() {
+  ctx.moveTo(180, 175);
+  ctx.lineTo(218, 167);
+  ctx.stroke();
 }
 
-function drawLeg1(){ 
-	ctx.moveTo(180,245); 
-	ctx.lineTo(145,270); 
-	ctx.stroke(); 
-} 
+function drawLeg1() {
+  ctx.moveTo(180, 245);
+  ctx.lineTo(145, 270);
+  ctx.stroke();
+}
 
-function drawLeg2(){ 
-	ctx.moveTo(180,245); 
-	ctx.lineTo(215,270); 
-	ctx.stroke(); 
+function drawLeg2() {
+  ctx.moveTo(180, 245);
+  ctx.lineTo(215, 270);
+  ctx.stroke();
 }
 
 function killTheMan() {
@@ -172,20 +170,15 @@ function enterLetter(letter) {
 function enableAllAlphaButtons() {
   let tdList = document.querySelectorAll(`.btnAlpha`);
   tdList.forEach((ele) => {
-    if (!ele.classList.contains("btnBorder btnOrange")) {
       ele.classList.add("btnBorder", "btnOrange");
       ele.disabled = false;
-    }
   });
 }
 
-
-function disableAllAlphaButtons(){
+function disableAllAlphaButtons() {
   let tdList = document.querySelectorAll(`.btnAlpha`);
   tdList.forEach((ele) => {
-  
-      ele.classList.remove("btnBorder", "btnOrange");
-      ele.disabled = true;
-   
+    ele.classList.remove("btnBorder", "btnOrange");
+    ele.disabled = true;
   });
 }
