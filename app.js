@@ -1,14 +1,4 @@
-const gameWords = [
-  { word: "doctor", hint: "profession" },
-  { word: "mango", hint: "fruit" },
-  { word: "toyota", hint: "vehicle company" },
-  { word: "lawyer", hint: "profession" },
-  { word: "apple", hint: "fruit" },
-  { word: "honda", hint: "vehicle company" },
-  { word: "teacher", hint: "profession" },
-  { word: "orange", hint: "fruit" },
-  { word: "nissan", hint: "vehicle company" },
-];
+
 
 let killCount = 0;
 let inputCount = 0;
