@@ -26,14 +26,14 @@ containerInput.append(containerInputRow);
 
 
 const containerInputRowCol1 = createDomElement('div', 'col-md-6 col-12');
-const containerInputRowCol2Row1 = createDomElement('div', 'row');
+const containerInputRowCol2Row1 = createDomElement('div', 'row form-group');
 
-const startButton = createDomElement('input', 'btn btn-primary', 'startGameBtn');
+const startButton = createDomElement('input', 'btn btn-warning', 'startGameBtn');
 startButton.type = 'button';
 startButton.value = 'Start Game';
 containerInputRowCol2Row1.append(startButton);
 
-const containerInputRowCol2Row2 = createDomElement('div', 'row');
+const containerInputRowCol2Row2 = createDomElement('div', 'row form-group');
 const inputBoxesLabel = createDomElement('label', 'col-lg-3');
 inputBoxesLabel.for = 'userInput';
 inputBoxesLabelText = document.createTextNode('User Input');
@@ -43,7 +43,7 @@ const inputBoxesDiv = createDomElement('div', 'col-lg-9', 'inputBoxes');
 containerInputRowCol2Row2.append(inputBoxesLabel, inputBoxesDiv);
 
 
-const containerInputRowCol2Row3 = createDomElement('div', 'row');
+const containerInputRowCol2Row3 = createDomElement('div', 'row form-group');
 const hintLabel = createDomElement('label', 'col-lg-3');
 hintLabel.for = 'testWordHint';
 hintLabelText = document.createTextNode('Hint');
@@ -53,7 +53,7 @@ const hintDiv = createDomElement('div', 'col-lg-9', 'testWordHint');
 containerInputRowCol2Row3.append(hintLabel, hintDiv);
 
 
-const containerInputRowCol2Row4 = createDomElement('div', 'row');
+const containerInputRowCol2Row4 = createDomElement('div', 'row form-group');
 const correctAnswerLabel = createDomElement('label', 'col-lg-3');
 correctAnswerLabel.for = 'correctAnswer';
 correctAnswerLabelText = document.createTextNode('Correct Answer');

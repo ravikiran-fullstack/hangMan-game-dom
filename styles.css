@@ -50,3 +50,8 @@
 /* #hangmanCanvas{ 
   border: 1px solid black; 
 } */
+
+#gameStatus{
+  text-align: center;
+  font-size: 3rem;
+}

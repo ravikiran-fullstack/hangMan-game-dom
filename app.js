@@ -15,6 +15,7 @@ function startGame(e) {
   testWordHint.innerHTML = randomTestWord.hint;
   correctAnswer.innerHTML = "";
   document.getElementById("inputBoxes").innerHTML = "";
+  document.getElementById("gameStatus").innerHTML = "";
   startGameBtn.value = "Restart Game";
   ctx = document.getElementById("hangmanCanvas").getContext("2d");
   generateInputBoxes(randomTestWord.word.length);
